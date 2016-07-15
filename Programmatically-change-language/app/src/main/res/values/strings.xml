@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Alterar língua programaticatimente</string>
+    <string name="action_portuguese">Português</string>
+    <string name="action_english">Inglês</string>
+    <string name="hello">Olá mundo!</string>
+</resources>

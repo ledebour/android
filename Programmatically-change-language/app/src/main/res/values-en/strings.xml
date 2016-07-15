@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Programmatically change language</string>
+    <string name="action_portuguese">Portuguese</string>
+    <string name="action_english">English</string>
+    <string name="hello">Hello world!</string>
+
+</resources>
