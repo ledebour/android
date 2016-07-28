@@ -1,6 +1,14 @@
 // plugin
 //https://github.com/Archinamon/GradleAspectJ-Android
 //https://github.com/Archinamon/AspectJExampleAndroid
+/*
+ to generate apk
+ 1) go to settings
+ 2) select build, execution, deployment
+ 3) select instant run
+ 4) uncheck enable instant run to hot swap code/resource changes on deploy (default enabled)
+  */
+
 
 //reference: https://eclipse.org/aspectj/doc/next/quick5.pdf
 
@@ -44,14 +52,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+        }
+
     }
 
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
-
 }
