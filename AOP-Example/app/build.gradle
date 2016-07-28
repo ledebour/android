@@ -1,5 +1,10 @@
+// plugin
 //https://github.com/Archinamon/GradleAspectJ-Android
 //https://github.com/Archinamon/AspectJExampleAndroid
+
+//reference: https://eclipse.org/aspectj/doc/next/quick5.pdf
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -16,6 +21,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.archinamon.aspectj'
 
 aspectj {
+
 
     weaveInfo true
     addSerialVersionUID true
@@ -39,6 +45,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
