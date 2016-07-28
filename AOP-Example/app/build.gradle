@@ -1,0 +1,50 @@
+//https://github.com/Archinamon/GradleAspectJ-Android
+//https://github.com/Archinamon/AspectJExampleAndroid
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://raw.github.com/Archinamon/GradleAspectJ-Android/master' }
+    }
+    dependencies {
+
+        //AspectJ
+        classpath 'com.archinamon:android-gradle-aspectj:2.0.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.archinamon.aspectj'
+
+aspectj {
+
+    weaveInfo true
+    addSerialVersionUID true
+    ignoreErrors false
+    logFileName 'ajc-details.log'
+}
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.ledebour.aop_example"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+
+}
