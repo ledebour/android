@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RecifeHoles</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="position_x">Posição x</string>
+    <string name="position_y">Posição Y</string>
+    <string name="position_z">Posição Z</string>
+    <string name="position_details">Detalhes sobre posição</string>
+</resources>
